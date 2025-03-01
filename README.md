@@ -75,7 +75,7 @@ To clean the project, run:
 
 ```sh   
 make clean
-``` 
+```
 
 ## Help
 To see all available commands, run:
@@ -83,3 +83,22 @@ To see all available commands, run:
 ```sh   
 make help
 ```
+
+# mypy error message
+Add the following segment to your poetry project file in case you have the following error message during build/compile:
+`module is installed, but missing library stubs`
+
+```yaml
+[tool.mypy]
+pretty = true
+show_error_codes = true
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = false
+disable_error_code = [
+    "annotation-unchecked",
+    "import-untyped",
+]
+```
+
