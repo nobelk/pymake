@@ -1,5 +1,5 @@
 # pymake
-Production grade makefile for Python Poetry projects.
+Easy to use makefile to create Python projects using poetry.
 
 
 ## Requirements
